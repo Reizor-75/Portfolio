@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;  
+}
+
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { 
+  box-sizing: inherit;
+}
+
+:root {
+  --main-color: #36B2E3;
+  --hover-color: #CEF2FE;
+  --background: black;
+}
+
+body{
+
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background);
+  width: 100vw;
+}
+
+header{
+  width: 100%;
+  color: var(--main-color);
+  background-color: var(--background);
+  padding: 10px;
+}
+
+main{
+  color: var(--hover-color);
+}
+
+div.contact{
+  display: flex;
+  width: 100%;
+}
+
+div.contact > a{
+  color: var(--main-color);
+  border-radius: 50%;
+  padding: 6px;
+  margin: 4px;
+  i{
+    font-size: 30px;
+  }
+}
+
+div.contact > a:hover{
+  color:var(--hover-color);
+  background-color: var(--main-color);
+}
