@@ -10,47 +10,128 @@ html {
 
 :root {
   --main-color: #36B2E3;
-  --hover-color: #CEF2FE;
+  --translucent-color: #CEF2FEcc;
   --background: black;
+  --font-s: 1.2em;
+  --font-m: 1.5em;
+  --font-l: 3em;
+  --font:"Rubik", sans-serif;
 }
 
 body{
-
   margin: 0;
   display: flex;
+  background-color: var(--background);
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: var(--font);
+  line-height: 1.5;
+  scrollbar-width: thin;          /* "auto" or "thin" */
+  scrollbar-color: var(--translucent-color) var(--background);   /* scroll thumb and track */ 
+}
+
+.nav{
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: var(--background);
-  width: 100vw;
-}
-
-header{
-  width: 100%;
+  justify-content: space-between;
+  width: 50%;
+  padding: 60px 0;
   color: var(--main-color);
-  background-color: var(--background);
-  padding: 10px;
 }
 
-main{
-  color: var(--hover-color);
+.my-name{
+  font-size: var(--font-l);
+  font-weight: 600;
 }
 
-div.contact{
+.position{  
+  font-size: var(--font-m);
+}
+
+.blurb{  
+  color: var(--translucent-color);
+}
+
+.contact{
   display: flex;
   width: 100%;
+  margin-left: auto;
 }
 
-div.contact > a{
+
+.contact > a{
   color: var(--main-color);
   border-radius: 50%;
   padding: 6px;
-  margin: 4px;
+  margin-top: 24x;
+  margin-right: 12px;
   i{
-    font-size: 30px;
+    font-size: var(--font-m);
   }
 }
 
-div.contact > a:hover{
-  color:var(--hover-color);
+.contact > a:hover{
+  color:var(--translucent-color);
   background-color: var(--main-color);
+}
+
+.content{
+  width: 50%;
+  height: 100%;   
+  padding: 60px 16px; 
+  overflow-y: auto;
+}
+
+.about-me{
+  color: var(--translucent-color);
+}
+
+.projects{
+  margin-top: 60px;
+
+  img{
+    width: 100px;
+    margin-right: 16px;
+  }
+}
+
+.projects > a{
+  text-decoration: none;
+  color: var(--translucent-color);
+}
+
+.project{
+  display: flex;
+  margin-top: 40px;
+}
+
+.project-title{
+  color: var(--main-color);
+  font-size: var(--font-m);
+  font-weight: 500;
+}
+
+.hh{
+  background-color: #76bdab;
+  border-radius: 50%;
+}
+
+.rs{
+  background-color: #aaa;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 1280px) {
+  .nav{
+    padding-left: 20px;
+  }
+
+  .content{
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  
 }
