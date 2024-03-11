@@ -14,15 +14,16 @@ html {
   --background: black;
   --font-s: 1.2em;
   --font-m: 1.5em;
-  --font-l: 3em;
+  --font-l: 2em;
+  --font-xl: 3em;
   --font:"Rubik", sans-serif;
 }
 
 body{
-  margin: 0;
   display: flex;
+  margin: 0;
   background-color: var(--background);
-  height: 100vh;
+  height: auto;
   max-width: 1280px;
   margin: 0 auto;
   font-family: var(--font);
@@ -31,17 +32,40 @@ body{
   scrollbar-color: var(--translucent-color) var(--background);   /* scroll thumb and track */ 
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--background);
+  border-radius: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--translucent-color);
+  border-radius: 8px;
+}
+
+iframe{
+  width: 70%
+}
+
 .nav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  padding: 60px 0;
+  height: 85vh;
+  margin-top: 60px; 
+  padding:0 16px;
   color: var(--main-color);
 }
 
 .my-name{
-  font-size: var(--font-l);
+  font-size: var(--font-xl);
   font-weight: 600;
 }
 
@@ -51,6 +75,7 @@ body{
 
 .blurb{  
   color: var(--translucent-color);
+  margin-bottom: 12px;
 }
 
 .contact{
@@ -78,8 +103,9 @@ body{
 
 .content{
   width: 50%;
-  height: 100%;   
-  padding: 60px 16px; 
+  height: 85vh;   
+  margin-top: 60px; 
+  padding:0 16px;
   overflow-y: auto;
 }
 
@@ -89,9 +115,11 @@ body{
 
 .projects{
   margin-top: 60px;
+  width: 100%;
 
   img{
-    width: 100px;
+    width: 150px;
+    height: 150px;
     margin-right: 16px;
   }
 }
@@ -103,7 +131,13 @@ body{
 
 .project{
   display: flex;
-  margin-top: 40px;
+  align-items: center;
+  margin-top: 40px;   
+}
+
+.project:hover{
+  animation: headShake; 
+  animation-duration: 1s;
 }
 
 .project-title{
@@ -117,21 +151,70 @@ body{
   border-radius: 50%;
 }
 
+.noted{
+  background-color: rgba(104, 197, 248);
+  border-radius: 50%;
+}
+
 .rs{
   background-color: #aaa;
   border-radius: 50%;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 900px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  iframe{
+    width: 100%;
+    height: 100px;
+  }
+
   .nav{
-    padding-left: 20px;
+    width: 100%;
+    height:fit-content;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .my-name{
+    font-size: var(--font-l);
+  }
+
+  .position{
+    font-size: var(--font-s);
+  }
+
+  .contact{
+    margin: 0px;
   }
 
   .content{
-    padding-right: 20px;
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    padding: 8px;
+    overflow-y: auto;
   }
-}
 
-@media only screen and (max-width: 1025px) {
-  
+  .projects {
+    margin-top: 8px;
+    img{
+      margin: 0;
+      margin-bottom: 8px;
+    }
+  }
+
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-title{
+    font-size: var(--font-s);
+  }
 }
