@@ -21,9 +21,11 @@ html {
 
 body{
   display: flex;
+  justify-content: right;
   margin: 0;
   background-color: var(--background);
-  height: auto;
+  height: 100%;
+  height: 90vh;
   max-width: 1280px;
   margin: 0 auto;
   font-family: var(--font);
@@ -54,14 +56,32 @@ iframe{
 }
 
 .nav{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: fixed;  
+  right: 50%;
   width: 50%;
-  height: 85vh;
+  max-width: 640px;
+  height: 100vh;  
   margin-top: 60px; 
-  padding:0 16px;
+  padding: 0 20px;
   color: var(--main-color);
+}
+
+.info{
+  width: 100%;
+}
+
+.image-container{
+  display: flex;
+  align-items: flex-start;
+  height: 70%;
+  max-height: 350px;
+  overflow-y: hidden;
+}
+
+.me{
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .my-name{
@@ -75,38 +95,53 @@ iframe{
 
 .blurb{  
   color: var(--translucent-color);
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .contact{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   margin-left: auto;
 }
 
+p{
+  margin: 0;
+}
 
-.contact > a{
+.contact-links{  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.contact-links > a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   color: var(--main-color);
+  width: var(--font-l);
+  height: var(--font-l);
   border-radius: 50%;
-  padding: 6px;
-  margin-top: 24x;
-  margin-right: 12px;
   i{
     font-size: var(--font-m);
   }
 }
 
-.contact > a:hover{
+.contact-links > a:hover{
   color:var(--translucent-color);
   background-color: var(--main-color);
 }
 
 .content{
+  display: block;
   width: 50%;
-  height: 85vh;   
+  height: 90vh;
   margin-top: 60px; 
-  padding:0 16px;
-  overflow-y: auto;
+  padding: 0 20px;
 }
 
 .about-me{
@@ -114,14 +149,20 @@ iframe{
 }
 
 .projects{
-  margin-top: 60px;
   width: 100%;
-
+  /* height: 80vh; */
+  /* overflow-y: auto; */
   img{
     width: 150px;
     height: 150px;
     margin-right: 16px;
   }
+}
+
+.projects-title{
+  color: var(--main-color);
+  font-size: var(--font-l);
+  font-weight: 600;
 }
 
 .projects > a{
@@ -132,7 +173,7 @@ iframe{
 .project{
   display: flex;
   align-items: center;
-  margin-top: 40px;   
+  margin-bottom: 40px;   
 }
 
 .project:hover{
@@ -148,6 +189,11 @@ iframe{
 
 .hh{
   background-color: #76bdab;
+  border-radius: 50%;
+}
+
+.ss{  
+  background-color: #cfe7c7;
   border-radius: 50%;
 }
 
@@ -167,20 +213,21 @@ iframe{
     flex-direction: column;
     align-items: center;
     width: 100vw;
-  }
-
-  iframe{
-    width: 100%;
-    height: 100px;
+    height: 95vh;
   }
 
   .nav{
+    position: static;
     width: 100%;
-    height:fit-content;
+    /* height:fit-content; */
     margin: 0;
     padding: 8px;
+    a{
+      margin-right: 16px;
+    }
   }
 
+  .co
   .my-name{
     font-size: var(--font-l);
   }
@@ -195,14 +242,14 @@ iframe{
 
   .content{
     width: 100%;
-    height: 80vh;
+    height: 65%;
     margin: 0;
     padding: 8px;
-    overflow-y: auto;
   }
 
   .projects {
     margin-top: 8px;
+    overflow-y: auto;
     img{
       margin: 0;
       margin-bottom: 8px;
