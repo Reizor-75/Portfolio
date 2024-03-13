@@ -9,7 +9,7 @@ html {
 }
 
 :root {
-  --main-color: #36B2E3;
+  --main-color: #028ec9;
   --translucent-color: #CEF2FEcc;
   --background: #252525;
   --font-s: 1.2em;
@@ -154,6 +154,7 @@ p{
   display: flex;
   flex-direction: row;
   justify-content: left;
+  margin-top: 12px;
 }
 
 .contact-links > a{
@@ -186,9 +187,8 @@ p{
 }
 
 .about-me{
-  font-size: var(--font-s);
   color: var(--translucent-color);
-  margin-bottom: 40px;
+  margin: 40px 0;
 }
 
 .projects{
@@ -275,8 +275,6 @@ p{
   }
 
   .my-name{
-    position: sticky;
-    top: 0;
     padding: 4px 0;
     font-size: var(--font-l);
     background-color: var(--background);
