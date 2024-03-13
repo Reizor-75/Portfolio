@@ -179,7 +179,7 @@ p{
 
 .content{
   display: block;
-  width: 45%;
+  width: 50%;
   max-width: 640px;
   height: 90vh;
   margin-top: 60px; 
@@ -211,7 +211,7 @@ p{
   display: flex;
   flex-direction: column;
   margin-bottom: 40px;   
-  padding: 8px;
+  padding: 16px;
   border-radius: 8px;
   img{
     width: 100%;
