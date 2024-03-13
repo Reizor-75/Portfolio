@@ -34,6 +34,23 @@ body{
   scrollbar-color: var(--translucent-color) var(--background);   /* scroll thumb and track */ 
 }
 
+.hidden {
+  opacity:0;
+}
+
+.console-container {
+  font-size:var(--font-s);
+  display:block;
+  color:white;
+  margin:auto;
+}
+
+.console-underscore {
+  display:inline-block;
+  position:relative;
+  left:10px;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 8px;
@@ -62,10 +79,14 @@ a{
 
 .nav{
   position: fixed;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   right: 50%;
-  width: 50%;
+  width: 45%;
   max-width: 640px;
-  height: 100vh;  
+  height: 90vh;  
+  max-height: 800px;
   margin-top: 60px; 
   padding: 0 20px;
   color: var(--main-color);
@@ -106,6 +127,7 @@ a{
 .section-links{
   display: flex;
   flex-direction: column;
+  font-weight: 500;
 }
 
 .contact{
@@ -117,7 +139,10 @@ a{
 }
 
 .written-contact{
-  margin-top: 8px;
+  color: var(--translucent-color) ;
+  i{
+    color: var(--main-color);
+  }
 }
 
 p{
@@ -137,11 +162,12 @@ p{
   align-items: center;
   text-decoration: none;
   color: var(--main-color);
-  width: var(--font-l);
-  height: var(--font-l);
+  width: var(--font-xl);
+  height: var(--font-xl);
   border-radius: 50%;
+  margin-right: 12px;
   i{
-    font-size: var(--font-m);
+    font-size: var(--font-l);
   }
 }
 
@@ -152,7 +178,7 @@ p{
 
 .content{
   display: block;
-  width: 50%;
+  width: 45%;
   max-width: 640px;
   height: 90vh;
   margin-top: 60px; 
@@ -177,31 +203,28 @@ p{
 
 }
 
+.projects > a {
+  color: var(--translucent-color);  
+}
+
 .project{
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 40px;   
+  padding: 8px;
+  border-radius: 8px;
+  img{
+    width: 100%;
+    opacity: .75;
+  }
 }
 
-.projects-title{
-  color: var(--main-color);
-  font-size: var(--font-l);
-  font-weight: 600;
-}
-
-.projects > a {
-  text-decoration: none;
-  color: var(--translucent-color);
-}
-
-.screenShot{
-  width: 100%;
-  opacity: .75;
-}
-
-.screenShot:hover{
-  opacity: 1;
+.project:hover{
+  background-color: #ffffff22;
+  box-shadow: 4px 4px 4px #000000aa;
+  img{
+    opacity: 1;
+  }
 }
 
 .project-title{
@@ -240,7 +263,6 @@ p{
   }
 
   .nav{
-    /* position: static; */
     position: relative;
     right: 0;
     width: 100%;
