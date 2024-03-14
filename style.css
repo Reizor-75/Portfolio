@@ -11,6 +11,8 @@ html {
 :root {
   --main-color: #028ec9;
   --translucent-color: #CEF2FEcc;
+  --tech-color: #42F577cc;
+  --tech-background-color: #42F57777;
   --hover: #ffffff11;
   --background: #252525;
   --font-xs: .8em;
@@ -23,7 +25,6 @@ html {
 
 body{
   display: flex;
-  justify-content: right;
   margin: 0;
   background-color: var(--background);
   height: 100%;
@@ -75,6 +76,22 @@ a{
   color: var(--main-color);
 }
 
+.page-up{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  i{
+    font-size: var(--font-l);
+    color: var(--tech-background-color);
+  }
+}
+
+.page-up:hover{
+  i{
+    color: var(--translucent-color);
+  }
+}
+
 .nav{
   position: fixed;  
   display: flex;
@@ -83,9 +100,8 @@ a{
   right: 55%;
   width: 40%;
   max-width: 512px;
-  height: 95vh;  
-  /* max-height: 900px; */
-  margin: 16px;
+  height: fit-content;  
+  /* margin: 16px; */
   margin-top: 40px; 
   padding: 20px;
   color: var(--main-color);
@@ -98,7 +114,7 @@ a{
 }
 
 .image-container{
-  display: flex;  
+  display: flex; 
   width: 50%;
   max-width: 400px;
   max-height: 400px;    
@@ -131,12 +147,12 @@ a{
   flex-direction: column;
   font-size: var(--font-s);
   font-weight: 500;
+  margin: 12px 0;
 }
 
 .section-links> a:hover{
   color: var(--translucent-color); 
   letter-spacing: 2px;
-
 }
 
 .contact{
@@ -187,24 +203,30 @@ p{
 }
 
 .content{
-  display: block;
-  width: 55%;
-  /* max-width: 768px; */
+  position: absolute;  
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  width: 45%;
+  max-width: 768px;
   height: 100%;
   margin-top: 40px; 
   padding: 20px;
+}
+
+.content > div {
+  margin-bottom: 40px;
 }
 
 .section-title{
   margin-top: 0px;
   color: var(--main-color);
   font-size: var(--font-m);
-
 }
 
 .about-me{  
   color: var(--translucent-color);
-  margin-bottom: 40px;
+  /* margin: 12px 0; */
 }
 
 .skills-container{  
@@ -212,7 +234,6 @@ p{
   display: flex;
   flex-direction: column;
   color: var(--translucent-color);
-  margin: 40px 0;   
 }
 
 .skills{
@@ -220,6 +241,7 @@ p{
   width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 40px;
   i{
     display: flex;
     justify-content: center;
@@ -232,7 +254,7 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4px;
+  padding: 12px 4px;
   margin-right: 12px;
 }
 
@@ -247,19 +269,13 @@ svg{
 
 .projects{
   width: 100%;
-  /* height: 80vh; */
-  /* overflow-y: auto; */
   height: fit-content;
+  margin-bottom: 40px;
   img{
     width: 150px;
     height: 150px;
     margin-right: 16px;
   }
-
-}
-
-.projects > a {
-  color: var(--translucent-color);  
 }
 
 .project{
@@ -268,6 +284,10 @@ svg{
   margin-bottom: 40px;   
   padding: 16px;
   border-radius: 8px;
+  color: var(--translucent-color);  
+  i{
+    font-size: var(--font-xs);
+  }
   img{
     opacity: .75;
   }
@@ -276,6 +296,18 @@ svg{
 .project:hover{
   background-color: var(--hover);
   box-shadow: 4px 4px 4px #000000aa;
+  .project-title{
+    color: var(--tech-color);
+  }
+  .project-title> a{
+    color: var(--tech-color);
+  }
+  .project-title> a:hover{
+    color: var(--translucent-color);  
+  }
+  .cred{    
+    color: var(--tech-color);  
+  }
   img{
     opacity: 1;
   }
@@ -295,10 +327,11 @@ svg{
 .tech-stack{
   display: flex;
   flex-wrap: wrap;
+  font-size: var(--font-xs);
   span{
-    background-color: var(--main-color);
+    background-color: var(--tech-background-color);
     font-weight: 500;
-    color: var(--background);
+    color: var(--translucent-color);
     margin-top: 12px;
     margin-right: 12px;
     padding: 2px 8px;
@@ -335,6 +368,24 @@ footer{
   padding-bottom: 40px;
 }
 
+
+@media only screen and (max-height: 900px) {
+  .nav{
+    margin-top: 12px;
+  }
+
+  .contact-links {
+    margin-top: 0;
+    i{
+      font-size: var(--font-s);
+    }
+  }
+
+  .content{    
+    margin-top: 12px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   body{
     display: flex;
@@ -349,7 +400,7 @@ footer{
     right: 0;
     width: 100%;
     height: fit-content;
-    margin: 4px;
+    margin: 8px 4px;
     padding: 8px;
     a{
       margin-right: 16px;
@@ -374,6 +425,7 @@ footer{
   }
 
   .content{
+    position: static;  
     display: flex;
     flex-direction: column;
     width: 100%;
