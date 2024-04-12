@@ -275,11 +275,12 @@ svg{
   width: 100%;
   height: fit-content;
   margin-bottom: 40px;
-  .project-image{
-    width: 150px;
-    height: 150px;
-    margin-right: 16px;
-  }
+}
+
+.project-image{
+  width: 150px;
+  height: 150px;
+  margin-right: 16px;
 }
 
 .project{
@@ -332,15 +333,16 @@ svg{
   display: flex;
   flex-wrap: wrap;
   font-size: var(--font-xs);
-  span{
-    background-color: var(--tech-background-color);
-    font-weight: 500;
-    color: var(--translucent-color);
-    margin-top: 12px;
-    margin-right: 12px;
-    padding: 2px 8px;
-    border-radius: 16px;
-  }
+}
+
+.tech-stack > span{
+  background-color: var(--tech-background-color);
+  font-weight: 500;
+  color: var(--translucent-color);
+  margin-top: 12px;
+  margin-right: 12px;
+  padding: 2px 8px;
+  border-radius: 16px;
 }
 
 .hh-logo{
@@ -390,19 +392,23 @@ footer{
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
+    width: 90vw;
     height: 95vh;
   }
 
   .nav{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     right: 0;
     width: 100%;
+    max-width: none;
     height: fit-content;
     margin: 8px 4px;
     padding: 8px;
@@ -410,10 +416,21 @@ footer{
       margin-right: 16px;
     }
   }
+  .nav > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-links{    
+    justify-content: center;
+    align-items: center;
+  }
 
   .my-name{
     padding: 4px 0;
-    font-size: var(--font-m);
+    font-size: var(--font-l);
   }
 
   .position{
@@ -433,9 +450,10 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: none;
     height: fit-content;
     margin: 0;
-    padding: 8px;
+    padding: 0 8px;
   }
 
   .projects {
