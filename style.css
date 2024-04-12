@@ -275,7 +275,7 @@ svg{
   width: 100%;
   height: fit-content;
   margin-bottom: 40px;
-  img{
+  .project-image{
     width: 150px;
     height: 150px;
     margin-right: 16px;
