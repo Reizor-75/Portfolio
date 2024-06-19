@@ -17,7 +17,7 @@ const HH = new project(
   "Hobby Huddle",
   "https://hobbyhuddle.netlify.app/",
   "https://github.com/Reizor-75/hobby-huddle-front-end",
-  "Hobby Huddle is a MERN Stack App that develops community bonds through a mutual love of hobbies.",
+  "Hobby Huddle is a MERN Stack App that develops community bonds through a mutual love of hobbies. Hobby Huddle provides a centralized hub where individuals seeking to learn new skills can easily find and engage with experienced mentors who tailor to their interests. Simultaneously, it offers teachers a space to showcase their talents and host sessions, while enabling vendors to promote their venues for workshops.",
   ["Guest@guest.com" , "Guest"],
   ["React", "MongoDB", "Node.js", "Javascript", "HTML/CSS"]
 );
@@ -61,7 +61,7 @@ const Retro = new project(
   "RetroSweeper",
   "https://michellelinares-minesweeper.netlify.app/",
   "https://github.com/Reizor-75/Minesweeper",
-  "Retrosweeper is a browser based recreation of the Windows 98 Minesweeper game",
+  "Retrosweeper is a browser based recreation of the Windows 98 Minesweeper game.RetroSweeper search and recursive methods to populate the board with mines, track mine locations, and expose the board appropriately when tiles are revealed.",
   [],
   ["Javascript", "HTML/CSS"]
 )
