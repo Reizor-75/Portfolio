@@ -280,30 +280,27 @@ svg{
 .project-image{
   width: 150px;
   height: 150px;
-  margin-right: 16px;
+  margin-right: 16px;  
+  border-radius: 50%;
 }
 
 .project{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   margin-bottom: 40px;   
   padding: 16px;
   border-radius: 8px;
-  color: var(--translucent-color);  
+  color: var(--translucent-color);    
+  opacity: .70;
   i{
     font-size: var(--font-xs);
-  }
-  img{
-    opacity: .75;
   }
 }
 
 .project:hover{
   background-color: var(--hover);
   box-shadow: 4px 4px 4px #000000aa;
-  .project-title{
-    color: var(--tech-color);
-  }
+  opacity: 1;
   .project-title> a{
     color: var(--tech-color);
   }
@@ -313,14 +310,11 @@ svg{
   .cred{    
     color: var(--tech-color);  
   }
-  img{
-    opacity: 1;
-  }
 }
 
 .project-title{
   color: var(--main-color);
-  font-size: var(--font-l);
+  font-size: var(--font-m);
   font-weight: 500;
 }
 
@@ -343,31 +337,6 @@ svg{
   margin-right: 12px;
   padding: 2px 8px;
   border-radius: 16px;
-}
-
-.hh-logo{
-  background-color: #76bdab;
-  border-radius: 50%;
-}
-
-.shelved-logo{
-  background-color: #d9c1b4;
-  border-radius: 50%;
-}
-
-.ss-logo{  
-  background-color: #cfe7c7;
-  border-radius: 50%;
-}
-
-.noted-logo{
-  background-color: #68c5f8;
-  border-radius: 50%;
-}
-
-.rs-logo{
-  background-color: #aaa;
-  border-radius: 50%;
 }
 
 footer{
