@@ -70,9 +70,45 @@ addProjects([HH, Shelved, Shinshi, Noted, Retro])
 
 function addProjects(projects){
   const projectsCotnainer = document.getElementById("projects");
+
+  // projectsCotnainer.appendChild(createDropDown());
+
   for(let i = 0; i < projects.length; i++){
     projectsCotnainer.appendChild(createProject(projects[i]));
   }
+}
+
+function createDropDown(){
+  const dropDown = document.createElement("div");
+  dropDown.className = "dropdown"
+
+  const dropBtn = document.createElement("button");
+  dropBtn.className = "dropbtn" 
+  dropBtn.innerHTML = "TechStack"
+  dropBtn.onclick = function(){  document.getElementById("tSDropdown").classList.toggle("show") }
+  dropDown.appendChild(dropBtn);
+
+  const content = document.createElement("div");
+  content.className = "dropdown-content"
+  content.id = "tSDropdown"
+
+  const js = document.createElement("div");
+  js.className = "JS"
+  js.innerHTML = "JavaScript"
+  content.appendChild(js)  
+  
+  const java = document.createElement("div");
+  java.className = "Java"
+  java.innerHTML = "Java"
+  content.appendChild(java)
+  
+  const python = document.createElement("div");  
+  python.className = "Python"
+  python.innerHTML = "Python"
+  content.appendChild(python)
+
+  dropDown.appendChild(content)  
+  return dropDown
 }
 
 function createProject(project){
@@ -129,4 +165,17 @@ function createProject(project){
 
   container.appendChild(content);
   return container;
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
