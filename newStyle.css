@@ -16,6 +16,7 @@ html {
   --tech-background-color: #42F57744;
   --hover: #ffffff11;
   --background: #252525;
+  --font-xxs: .8em;
   --font-xs: 1em;
   --font-s: 1.3em;
   --font-m: 1.6em;
@@ -91,7 +92,7 @@ a{
   right: 20px;
   bottom: 20px;
   i{
-    font-size: var(--font-l);
+    font-size: var(--font-xl);
     color: var(--tech-background-color);
   }
 }
@@ -124,10 +125,11 @@ a{
   min-width: 800px;
   min-height: 100vh;
   margin: 0 24px;
+  padding-bottom: 48px;
 }
 
 .section-title{
-  font-size: var(--font-xs);
+  font-size: var(--font-s);
   font-family: "sarala", sans-serif;
   font-weight: 600;
   padding-bottom: 24px;
@@ -143,7 +145,7 @@ a{
 }
 
 #about-me{  
-  /* font-size: var(--font-s); */
+  font-size: var(--font-s);
   .content{
     display:flex;
     align-items: center;
@@ -275,13 +277,14 @@ footer{
 
 @media only screen and (max-width: 900px) {
   body{
-    width: 90vw;
+    /* width: 95vw; */
+    /* margin: unset; */
   }
 
   #navBar{
     justify-content: space-around;
     padding: 16px 0;
-    font-size: var(--font-xs);
+    font-size: var(--font-xxs);
     a{
       padding: 0;
     }
@@ -291,7 +294,6 @@ footer{
     min-width: unset;
   }
 
-
   .intro{
     font-size: var(--font-xl);
     text-align: center;
@@ -299,12 +301,13 @@ footer{
 
   .content{
     flex-direction: column-reverse;
-    font-size: var(--font-s);
+    /* font-size: var(--font-s); */
   }
 
   .project{
     flex-direction: column;
     align-items: center;
+    padding: unset;
   }
 
   .project-image{
@@ -312,7 +315,16 @@ footer{
     margin-bottom: 24px;
   }
 
+  .project-content{
+    font-size: var(--font-s);
+  }
+
   #contact{
     font-size: var(--font-s);
+  }
+
+  .contact-links{
+    display: flex;
+    justify-content: space-between;
   }
 }
