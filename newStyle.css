@@ -232,8 +232,7 @@ a{
 
 #skills{
   min-height: 50vh;
-  width:calc(100vw - 48px);
-
+  width:calc(100vw - 96px);
 }
 
 .skills-container{
@@ -332,5 +331,9 @@ footer{
   .contact-links{
     display: flex;
     justify-content: space-between;
+  }
+
+  #skills{  
+    width:calc(100vw - 48px);
   }
 }
