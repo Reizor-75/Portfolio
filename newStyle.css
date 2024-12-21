@@ -91,12 +91,20 @@ a{
   right: 20px;
   bottom: 20px;
   i{
-    font-size: var(--font-xl);
+    font-size: var(--font-l);
     color: var(--tech-background-color);
   }
 }
 
+@keyframes up-move{
+  100%{
+    transform-origin: right;
+    transform: translateY(-20px);
+  }
+}
+
 .page-up:hover{
+  animation: up-move 1s ease forwards;
   i{
     color: var(--translucent-color);
   }
@@ -175,21 +183,16 @@ a{
 
 .project{
   display: flex;
-  /* align-items: center; */
   margin-bottom: 40px;   
   padding: 16px;
   border-radius: 8px;
-  /* color: var(--translucent-color);     */
-  /* opacity: .70; */
   i{
     font-size: var(--font-xs);
   }
 }
 
 .project:hover{
-  /* background-color: var(--hover); */
-  /* box-shadow: 4px 4px 4px #000000aa;
-  opacity: 1; */
+
   .project-title> a{
     color: var(--tech-color);
   }
@@ -262,6 +265,20 @@ svg{
   width: 60px;
 }
 
+#contact{
+  width:calc(100vw - 96px);
+}
+
+.contact-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.written-contact{
+  display: flex;
+  flex-direction: column;
+}
 
 .contact-links{
   i{
@@ -273,6 +290,30 @@ svg{
     height: 50px;
     padding: 8px;
     border-radius: 50%;
+    margin: 4px;
+  }
+}
+
+.email-form{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.email-form > label{
+  margin-bottom: 12px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  input, textarea{
+    height: 24px;
+    width: 85%;
+    padding: 6px;
+  }
+  textarea{
+    height: 200px;
+    padding: 6px;
   }
 }
 
@@ -297,6 +338,7 @@ footer{
 
   .section{
     min-width: unset;
+    font-size: var(--font-xxs);
   }
 
   .intro{
@@ -324,9 +366,9 @@ footer{
     font-size: var(--font-s);
   }
 
-  #contact{
+  /* #contact{
     font-size: var(--font-s);
-  }
+  } */
 
   .contact-links{
     display: flex;
@@ -335,5 +377,24 @@ footer{
 
   #skills{  
     width:calc(100vw - 48px);
+  }
+
+  #contact{  
+    width:calc(100vw - 48px);
+  }
+
+  .contact-container{
+    flex-direction: column-reverse;
+    /* align-items: end; */
+  }
+
+  .written-contact{
+    margin-left: auto;
+    width: fit-content;
+    text-align: right;
+  }
+
+  .email-form{
+    width: unset;
   }
 }
