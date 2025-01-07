@@ -61,7 +61,7 @@ const Retro = new project(
   "RetroSweeper",
   "https://michellelinares-minesweeper.netlify.app/",
   "https://github.com/Reizor-75/Minesweeper",
-  "Retrosweeper is a browser based recreation of the Windows 98 Minesweeper game.RetroSweeper search and recursive methods to populate the board with mines, track mine locations, and expose the board appropriately when tiles are revealed.",
+  "Retrosweeper is a browser based recreation of the Windows 98 Minesweeper game. RetroSweeper uses recursive methods to populate the board with mines, track mine locations, and expose the board appropriately when tiles are revealed.",
   [],
   ["Javascript", "HTML/CSS"]
 )
