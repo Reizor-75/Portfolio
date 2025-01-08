@@ -133,6 +133,7 @@ a{
   margin: 0 24px;
   padding-bottom: 48px;
   max-width: 1280px;
+
 }
 
 .section-title{
@@ -240,8 +241,10 @@ a{
 
 .skills-container{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+  /* display: flex;
+  flex-wrap: wrap;
+  width: 75%; */
 }
 
 .skills-container > *{
@@ -323,7 +326,6 @@ footer{
 
 @media only screen and (max-width: 720px) {
   body{
-    /* width: 95vw; */
     margin: unset;
   }
 
@@ -348,7 +350,6 @@ footer{
 
   .content{
     flex-direction: column-reverse;
-    /* font-size: var(--font-s); */
   }
 
   .project{
@@ -366,10 +367,6 @@ footer{
     font-size: var(--font-s);
   }
 
-  /* #contact{
-    font-size: var(--font-s);
-  } */
-
   .contact-links{
     display: flex;
     justify-content: space-between;
@@ -384,15 +381,16 @@ footer{
   }
 
   .contact-container{
-    flex-direction: column-reverse;
-    /* align-items: end; */
+    /* flex-direction: column-reverse; */
+    align-items: end; 
+    font-size: var(--font-s);
   }
 
-  .written-contact{
+  /* .written-contact{
     margin-left: auto;
     width: fit-content;
     text-align: right;
-  }
+  } */
 
   .email-form{
     width: unset;
