@@ -114,15 +114,23 @@ a{
   position: fixed;
   right: 0;
   display: flex;
+  justify-content: space-between;
   background-color: var(--background);
   width: 100vw;
-  justify-content: right;
   padding: 16px;
   font-weight: 600;
   z-index:99;
   a{
     padding-left: 48px;
   }
+}
+
+.name{
+  font-size: var(--font-s);
+}
+.navLinks{
+  display: flex;  
+  justify-content: right;
 }
 
 .section{
