@@ -128,10 +128,6 @@ a{
 .name{
   font-size: var(--font-s);
 }
-.navLinks{
-  display: flex;  
-  justify-content: right;
-}
 
 .section{
   display: flex;
@@ -334,11 +330,12 @@ footer{
 
 @media only screen and (max-width: 720px) {
   body{
-    margin: unset;
+    margin: unset;   
   }
 
   #navBar{
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     padding: 16px 0;
     font-size: var(--font-xxs);
     a{
@@ -346,9 +343,27 @@ footer{
     }
   }
 
+  .name{  
+    display: flex;
+    justify-content: center;
+  }
+
+  .navlinks{
+    display: flex;
+    justify-content: space-around;
+  }
+
   .section{
     min-width: unset;
+    min-height: fit-content;
     font-size: var(--font-xxs);
+  }
+
+  #home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .intro{
