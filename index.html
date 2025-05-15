@@ -22,43 +22,81 @@
 
   <title>Michelle Linares</title>
 </head>
-<body>
+<body class="dark-mode">
   <a href="#top" class="page-up"><i class="fa-solid fa-circle-arrow-up"></i></a>
+  
   <div id="navBar"> 
-    <div class="name"> M.Linares</div>
-    <div class="navlinks">
-    <a href="#home">HOME</a>
-    <a href="#about-me">ABOUT ME</a>
-    <a href="#projects">PROJECTS</a>
-    <a href="#skills">SKILLS</a>
-    <a href="#contact">CONTACT</a>   
+    <div class="nav-container">
+      <span class="nav-Name">Michelle Linares</span>
+      <div class="nav-buttons">
+        <div class="navlinks">
+          <a href="#home">HOME</a>
+          <a href="#about-me">ABOUT ME</a>
+          <a href="#projects">PROJECTS</a>
+          <a href="#skills">SKILLS</a>
+        </div>
+        <button onclick='toggleMode()' id="toggle" class="dark-mode"><i class="fa-solid fa-sun"></i></button>
+        <div class="navlinks_mobile">
+          <div><i class="fa-solid fa-bars"></i></div>
+          <div class="navLinks-container">
+            <a href="#home"><i class="fa-solid fa-house"></i><span>HOME</span></a>
+            <a href="#about-me"><i class="fa-solid fa-user"></i><span>ABOUT ME</span></a>
+            <a href="#projects"><i class="fa-solid fa-file-pen"></i><span>PROJECTS</span></a>
+            <a href="#skills"><i class="fa-solid fa-hammer"></i><span>SKILLS</span></a>
+          </div>
+        </div>
+        <script>        
+          const toggleEle = document.getElementById("toggle")
+
+          function toggleMode(){
+            const ele = document.body;
+            ele.classList.toggle("dark-mode")
+            toggleEle.classList.toggle("dark-mode")
+            
+            if(toggleEle.className === "dark-mode"){
+              toggleEle.innerHTML =`<i class="fa-solid fa-sun"></i>` }
+            else toggleEle.innerHTML = `<i class="fa-solid fa-moon"></i>`
+          }
+        </script>
+      </div>
     </div>
   </div>
 
   <div class="section" id="home">
-    <div class="intro">Hello, I'm Michelle. </div>
-    <!-- <div class="position">Full Stack Developer</div> -->
-    <div class='console-container'><span id='text'></span>
-      <div class='console-underscore' id='console'>&#95;</div>
+    <div class="image-container">
+      <img class="me"src="./assets/images/profile.jpg" alt="My Photo">
+    </div>
+    <div class="intro">
+      <div class="name">Hi, I'm Michelle Linares.</div>
+      <div class='console-container'>
+        <span id='text'></span>
+        <div class='console-underscore' id='console'>&#95;</div>
+      </div>
+
+      <p> <i class="fa-solid fa-location-dot"></i> New York, New York <br>
+        <i class="fa-solid fa-envelope"></i> M.Linares93@gmail.com <br>
+      </p>
+      <div class="contact-links">
+        <a href="https://github.com/Reizor-75/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/michellelinares75/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://drive.google.com/file/d/14PUupWe571jqcCVNHhjC-GEOt3Rrktp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file" target="_blank" rel="noopener noreferrer"></i></a>
+        <!-- <a href="mailto:m.linares93@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a> -->
+      </div>
     </div>
   </div>
 
   <div class="section" id="about-me">
     <div class="section-title">About Me</div>
-    <div class="content">
+    <div class="content">   
       <div id="about-me-description">
         I'm a former educator turned software engineer who has a passion for continuous learning through my personal love of technology, education, and art. <br><br>
         My love of programming is rooted in my love of video games. As a child, I fell in love with <span class="italic">The Legend of Zelda</span> so much so that I pursued Game Design and Development for my undergrad at <span class="italic">The Rochester Institute of Technology</span>. After a career in education, I found myself missing the rigors of software development and chose to enroll into <span class="italic">General Assembly's</span> software engineering immersive course.
-        <!-- Specializing as a tech artist with a focus on 3D character Modeling, I took my skills to -->
         <br><br>
         In my free time, you can find me outside cycling or surfing, or creating something new, whether it is a game, app, painting, or even cosplay. I basically make a little bit of everything.<br>
       </div>
-      <div class="image-container">
-        <img class="me"src="./assets/images/profile.jpg" alt="My Photo">
-      </div>
+    </div>
     </div>
   </div>
-
   <div class="section" id="projects">      
     <div class="section-title">Projects</div>
   </div>
@@ -85,27 +123,6 @@
     </div>
   </div>
 
-  <div class="section" id="contact">
-    <div class="section-title">Get In Touch</div>
-    <div class="contact-container">
-      <div class="written-contact">
-      <p> <i class="fa-solid fa-location-dot"></i> New York, New York <br>
-        <i class="fa-solid fa-envelope"></i> M.Linares93@gmail.com <br></p>
-        <div class="contact-links">
-          <a href="https://github.com/Reizor-75/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/michellelinares75/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://drive.google.com/file/d/14PUupWe571jqcCVNHhjC-GEOt3Rrktp6/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file" target="_blank" rel="noopener noreferrer"></i></a>
-          <a href="mailto:m.linares93@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-      </div> 
-      <!-- <form action="" class="email-form">
-        <label for="email">Email<input type="email" name="email" id="">
-        </label>
-        <label for="subject">Subject<input type="text" name="subject" id=""></label>
-        <label for="">Content<Textarea></Textarea></label>
-      </form> -->
-    </div>
-  </div>      
 
 </div>
   <!-- <div class="nav">

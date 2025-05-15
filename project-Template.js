@@ -48,7 +48,7 @@ const Noted = new project(
   "./assets/images/noted-favi.png",
   "#68c5f8",
   "Noted",
-  "https://noted-ml.fly.dev/",
+  "https://Noted-ml.fly.dev/",
   "https://github.com/Reizor-75/Noted",
   "Noted is a PERN Stack Django app where users can keep information organized using the Cornell Notes System. Noted lets you sorts your notes by subjects to allow easy navigation to specific notes, and allows you to edit or delete them when no longer in use. Meant to mimic a school like aesthetic, Noted takes design influence from note cards, graphic paper and the classic Cornell Note layout while allowing it's users to custom the look with interchangeable handwritten style fonts and color selection. Noted is designed primarily for tablet and mobile use but is also available for desktop usage.",
   ["Guest","password123!"],
@@ -125,24 +125,31 @@ function createProject(project){
   const content = document.createElement("div");
   content.className = "project-content";
   
+  const titleContainer = document.createElement("div");
+  titleContainer.className = "project-title-container";
+  
   const title = document.createElement("div");
-  title.className = "project-title";
+  title.className = "project-title"
+  title.innerHTML = `${project.title}`;
+  titleContainer.appendChild(title);
 
   const link = document.createElement('a');
+  link.className = "project-link"
   link.href = project.link;
   link.target = "_blank";
   link.rel = "noopener noreferrer";
-  link.innerHTML = `${project.title} <i class="fa-solid fa-arrow-up-right-from-square"></i>`
-  title.appendChild(link);
+  link.innerHTML = ` <i class="fa-solid fa-link"></i> ${project.link.substring(8, project.link.length-1)}`
+  titleContainer.appendChild(link);
 
   const git = document.createElement('a');
+  git.className = `github-link`
   git.href = project.git;
   git.target = "_blank";
   git.rel = "noopener noreferrer";
-  git.innerHTML = ` <i class="fa-brands fa-github"></i>`
-  title.appendChild(git);
+  git.innerHTML = `<i class="fa-brands fa-github"></i> ${project.git.substring(8, project.git.length)}`
+  // titleContainer.appendChild(git);
 
-  content.appendChild(title);
+  content.appendChild(titleContainer);
 
   const description = document.createElement("div");
   description.className = "project-description";
@@ -152,7 +159,7 @@ function createProject(project){
   const cred = document.createElement("div");
   cred.className = "cred-container"; 
   if(project.cred[0]) cred.innerHTML = `<span class='cred'>Username: ${project.cred[0]}</span> <br><span class='cred'>Password: ${project.cred[1]}</span>`;
-  content.appendChild(cred);
+  titleContainer.appendChild(cred);
 
   const techStack = document.createElement("div");
   techStack.className = "tech-stack";

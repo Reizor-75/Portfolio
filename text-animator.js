@@ -1,7 +1,7 @@
 //https://www.sliderrevolution.com/resources/css-text-animation/ CSS Terminal Text Effect Developer: Tobias
 
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Software Engineer', '3D Artists', 'Continuous Learner', 'Game and Technology Enthusiast'], 'text',['#CEF2FEcc']);
+consoleText(['Software Engineer', '3D Artists', 'Continuous Learner', 'Game and Technology Enthusiast'], 'text',['#028ec9']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
